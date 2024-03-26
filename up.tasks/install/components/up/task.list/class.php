@@ -35,7 +35,7 @@ class TaskListComponent extends CBitrixComponent
 
 		$this->arParams['NEEDED_DAY'] = $neededDay->format('Y-m-d');
 
-		$tasks = TaskManager::getTaskList();
+		$tasks = TaskManager::getTaskList($neededDay);
 		$this->arResult['TASKS'] = $tasks;
 	}
 }
